@@ -1,54 +1,61 @@
-# React + TypeScript + Vite
+# Quiz App - Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The **Quiz App** is a web-based application built using **React** and **Vite**. It allows users to create, join, and play quizzes in real-time. The app supports multiplayer functionality, leaderboard tracking, and dynamic question timing, making it ideal for interactive learning or entertainment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **User Authentication**: Secure login and registration system.
+- **Quiz Creation**: Users can create quizzes with custom questions and answers.
+- **Real-Time Gameplay**: Players can join quizzes in progress and participate in real-time.
+- **Leaderboard**: Tracks player scores and ranks them dynamically.
+- **Timer for Questions**: Each question has a countdown timer to ensure fair play.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Frontend**: React, Vite, TypeScript, TailwindCSS
+- **Backend**: SignalR (for real-time communication)
+- **State Management**: React Context API
+- **Styling**: TailwindCSS
+- **Build Tool**: Vite
+- **Testing**: Jest (if applicable)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/quiz-app-vite.git
+   cd quiz-app-vite
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory and configure the following environment variables:
+   ```env
+   VITE_API_URL=http://your-backend-api-url
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open the app in your browser:
+   ```
+   http://localhost:5173
+   ```
+
+6. To build the app for production:
+   ```bash
+   npm run build
+   ```
+
+7. To preview the production build:
+   ```bash
+   npm run preview
+   ```
