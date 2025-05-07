@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Prevent layout shift from scrollbar */
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  position: relative;
+}
+
+/* Thêm CSS cho scrollbar behavior */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Tùy chỉnh style cho scrollbar (tùy chọn) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
